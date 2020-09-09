@@ -1,8 +1,164 @@
 /*
 COLORS:
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+Light blue: #525A96
+Medium blue: #404985
+Dark blue: #313975
 
 */
+
+/* ===========================================================
+General Style
+=========================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* border-box to remove border/paddings that are already preset in box model */
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+/* ===========================================================
+Header
+=========================================================== */
+/* General Header Style */
+.header {
+  position: relative;
+  height: 95vh; /* At every point, the height of the element should be 95% of the viewport height */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(82, 90, 150, 0.616),
+      rgba(49, 57, 117, 0.534)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover; /* whatever the width of the element, it will fit the element inside of the box */
+  background-position: top; /* ensure that whatever the viewport size, the image remains at the top of the container */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 75vh,
+    0 100%
+  ); /* specify the polygon in which the image is still visible, moving clockwise */
+}
+
+/* Logo Style */
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+/* Primary Heading Style */
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: #ffffff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 60px;
+}
+
+.heading-primary-main {
+  display: block; /* block elements occupy the entire width they have avail and create line breaks */
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: 1s;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+  animation: moveInRight 1s ease-out;
+}
+
+/* Button Style */
+.btn:link,
+.btn:visited {
+  /* pseudo-class is a special state of a selector under special conditions */
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #777777;
+}
+
+/* ===========================================================
+Media Query
+=========================================================== */
+
+/* ===========================================================
+Keyframes
+=========================================================== */
+/* Primary Text Animation */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translate(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  20% {
+    transform: translate(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+/* Primary Button Animation */
