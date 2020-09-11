@@ -52,7 +52,7 @@ Header
   text-align: center; }
 
 .heading-primary {
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 3.75rem; }
@@ -95,8 +95,8 @@ Header
   box-shadow: 0 0.313 0.625 rgba(0, 0, 0, 0.2); }
 
 .btn--white {
-  background-color: #ffffff;
-  color: #777777; }
+  background-color: #fff;
+  color: #777; }
 
 .btn::after {
   content: "";
@@ -111,7 +111,7 @@ Header
   transition: all 0.4s; }
 
 .btn--white::after {
-  background-color: #ffffff; }
+  background-color: #fff; }
 
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);

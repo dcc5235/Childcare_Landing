@@ -7,7 +7,8 @@ $color-primary-light: #525a96;
 $color-primary-dark: #313975;
 
 $color-grey-dark: #777;
-$color-white: $color-white;
+$color-white: #fff;
+$color-black: #000;
 /* ===========================================================
 General Style
 =========================================================== */
@@ -110,12 +111,12 @@ Header
 
 .btn:hover {
   transform: translateY(-0.188rem);
-  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.625rem 1.25rem rgba($color-black, 0.2);
 }
 
 .btn:active {
   transform: translateY(-0.063);
-  box-shadow: 0 0.313 0.625 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.313 0.625 rgba($color-black, 0.2);
 }
 
 .btn--white {
