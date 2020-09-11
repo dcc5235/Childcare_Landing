@@ -1,0 +1,22 @@
+{
+  "name": "careforyou",
+  "version": "1.0.0",
+  "description": "Landing page for careforyou",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcc5235/Care-for-You-Landing-Page.git"
+  },
+  "author": "Dany Chheang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcc5235/Care-for-You-Landing-Page/issues"
+  },
+  "homepage": "https://github.com/dcc5235/Care-for-You-Landing-Page#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
