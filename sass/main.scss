@@ -9,6 +9,7 @@ $color-primary-dark: #313975;
 $color-grey-dark: #777;
 $color-white: #fff;
 $color-black: #000;
+
 /* ===========================================================
 General Style
 =========================================================== */
@@ -31,7 +32,7 @@ body {
 /* ===========================================================
 Header
 =========================================================== */
-/* General Header Style */
+
 .header {
   position: relative;
   height: 95vh; /* At every point, the height of the element should be 95% of the viewport height */
@@ -49,26 +50,24 @@ Header
     100% 75vh,
     0 100%
   ); /* specify the polygon in which the image is still visible, moving clockwise */
-}
 
-/* Logo Style */
-.header__logo-box {
-  position: absolute;
-  top: 2.5rem;
-  left: 2.5rem;
-}
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
 
-.header__logo {
-  height: 2.2rem;
-}
+  &__logo {
+    height: 2.2rem;
+  }
 
-/* Primary Heading Style */
-.header__text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-40%, -50%);
-  text-align: center;
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    text-align: center;
+  }
 }
 
 .heading-primary {
@@ -76,79 +75,80 @@ Header
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 3.75rem;
-}
 
-.heading-primary--main {
-  display: block; /* block elements occupy the entire width they have avail and create line breaks */
-  font-size: 3.125rem;
-  font-weight: 400;
-  letter-spacing: 2.2rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: 1s;
-}
+  &--main {
+    display: block; /* block elements occupy the entire width they have avail and create line breaks */
+    font-size: 3.125rem;
+    font-weight: 400;
+    letter-spacing: 2.2rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: 1s;
+  }
 
-.heading-primary--sub {
-  display: block;
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 1.1rem;
-  animation: moveInRight 1s ease-out;
+  &--sub {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 1.1rem;
+    animation: moveInRight 1s ease-out;
+  }
 }
 
 /* Button Style */
-.btn:link,
-.btn:visited {
-  /* pseudo-class is a special state of a selector under special conditions */
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1rem 2.5rem;
-  display: inline-block;
-  border-radius: 6.25rem;
-  transition: all 0.2s;
-  position: relative;
-}
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    display: inline-block;
+    border-radius: 6.25rem;
+    transition: all 0.2s;
+    position: relative;
+  }
 
-.btn:hover {
-  transform: translateY(-0.188rem);
-  box-shadow: 0 0.625rem 1.25rem rgba($color-black, 0.2);
-}
+  &:hover {
+    transform: translateY(-0.188rem);
+    box-shadow: 0 0.625rem 1.25rem rgba($color-black, 0.2);
 
-.btn:active {
-  transform: translateY(-0.063);
-  box-shadow: 0 0.313 0.625 rgba($color-black, 0.2);
-}
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
 
-.btn--white {
-  background-color: $color-white;
-  color: $color-grey-dark;
-}
+  &:active {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 6.25rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
-}
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
 
-.btn--white::after {
-  background-color: $color-white;
-}
+    &::after {
+      background-color: $color-white;
+    }
+  }
 
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 6.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
 
-.btn--animated {
-  animation: moveInButton 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
+  &--animated {
+    animation: moveInButton 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
 }
 
 /* ===========================================================

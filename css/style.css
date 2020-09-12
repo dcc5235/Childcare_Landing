@@ -21,7 +21,6 @@ body {
 /* ===========================================================
 Header
 =========================================================== */
-/* General Header Style */
 .header {
   position: relative;
   height: 95vh;
@@ -33,51 +32,42 @@ Header
   /* ensure that whatever the viewport size, the image remains at the top of the container */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /* specify the polygon in which the image is still visible, moving clockwise */ }
-
-/* Logo Style */
-.header__logo-box {
-  position: absolute;
-  top: 2.5rem;
-  left: 2.5rem; }
-
-.header__logo {
-  height: 2.2rem; }
-
-/* Primary Heading Style */
-.header__text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-40%, -50%);
-  text-align: center; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 2.2rem; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    text-align: center; }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 3.75rem; }
-
-.heading-primary--main {
-  display: block;
-  /* block elements occupy the entire width they have avail and create line breaks */
-  font-size: 3.125rem;
-  font-weight: 400;
-  letter-spacing: 2.2rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: 1s; }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 1.1rem;
-  animation: moveInRight 1s ease-out; }
+  .heading-primary--main {
+    display: block;
+    /* block elements occupy the entire width they have avail and create line breaks */
+    font-size: 3.125rem;
+    font-weight: 400;
+    letter-spacing: 2.2rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: 1s; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 1.1rem;
+    animation: moveInRight 1s ease-out; }
 
 /* Button Style */
-.btn:link,
-.btn:visited {
-  /* pseudo-class is a special state of a selector under special conditions */
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1rem 2.5rem;
@@ -89,14 +79,19 @@ Header
 .btn:hover {
   transform: translateY(-0.188rem);
   box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
-  transform: translateY(-0.063);
-  box-shadow: 0 0.313 0.625 rgba(0, 0, 0, 0.2); }
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn--white {
   background-color: #fff;
   color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: "";
@@ -109,13 +104,6 @@ Header
   left: 0;
   z-index: -1;
   transition: all 0.4s; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
 
 .btn--animated {
   animation: moveInButton 0.5s ease-out 0.75s;
