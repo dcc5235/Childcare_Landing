@@ -1,204 +1,23 @@
 /* ===========================================================
-Variables
+Import
 =========================================================== */
 
-$color-primary: #404985;
-$color-primary-light: #525a96;
-$color-primary-dark: #313975;
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-$color-grey-dark: #777;
-$color-white: $color-white;
-/* ===========================================================
-General Style
-=========================================================== */
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* border-box to remove border/paddings that are already preset in box model */
-}
+@import "components/button";
 
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: $color-grey-dark;
-  padding: 1.875rem;
-}
+@import "layout/header";
+@import "layout/grid";
 
-/* ===========================================================
-Header
-=========================================================== */
-/* General Header Style */
-.header {
-  position: relative;
-  height: 95vh; /* At every point, the height of the element should be 95% of the viewport height */
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.616),
-      rgba($color-primary-dark, 0.534)
-    ),
-    url(../img/hero.jpg);
-  background-size: cover; /* whatever the width of the element, it will fit the element inside of the box */
-  background-position: top; /* ensure that whatever the viewport size, the image remains at the top of the container */
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 75vh,
-    0 100%
-  ); /* specify the polygon in which the image is still visible, moving clockwise */
-}
-
-/* Logo Style */
-.header__logo-box {
-  position: absolute;
-  top: 2.5rem;
-  left: 2.5rem;
-}
-
-.header__logo {
-  height: 2.2rem;
-}
-
-/* Primary Heading Style */
-.header__text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-40%, -50%);
-  text-align: center;
-}
-
-.heading-primary {
-  color: $color-white;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  margin-bottom: 3.75rem;
-}
-
-.heading-primary--main {
-  display: block; /* block elements occupy the entire width they have avail and create line breaks */
-  font-size: 3.125rem;
-  font-weight: 400;
-  letter-spacing: 2.2rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: 1s;
-}
-
-.heading-primary--sub {
-  display: block;
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 1.1rem;
-  animation: moveInRight 1s ease-out;
-}
-
-/* Button Style */
-.btn:link,
-.btn:visited {
-  /* pseudo-class is a special state of a selector under special conditions */
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1rem 2.5rem;
-  display: inline-block;
-  border-radius: 6.25rem;
-  transition: all 0.2s;
-  position: relative;
-}
-
-.btn:hover {
-  transform: translateY(-0.188rem);
-  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-  transform: translateY(-0.063);
-  box-shadow: 0 0.313 0.625 rgba(0, 0, 0, 0.2);
-}
-
-.btn--white {
-  background-color: $color-white;
-  color: $color-grey-dark;
-}
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 6.25rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
-}
-
-.btn--white::after {
-  background-color: $color-white;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
-.btn--animated {
-  animation: moveInButton 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
-}
+@import "pages/home";
 
 /* ===========================================================
 Media Query
 =========================================================== */
-
-/* ===========================================================
-Keyframes
-=========================================================== */
-/* Primary Text Animation */
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-6.25rem);
-  }
-
-  80% {
-    transform: translate(0.625rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(6.25rem);
-  }
-
-  20% {
-    transform: translate(-0.625rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0rem);
-  }
-}
-
-/* Primary Button Animation */
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(1.875rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0rem);
-  }
-}

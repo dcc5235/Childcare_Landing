@@ -1,0 +1,45 @@
+/* Primary Text Animation */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-6.25rem);
+  }
+
+  80% {
+    transform: translate(0.625rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(6.25rem);
+  }
+
+  20% {
+    transform: translate(-0.625rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0rem);
+  }
+}
+
+/* Primary Button Animation */
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(1.875rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0rem);
+  }
+}
