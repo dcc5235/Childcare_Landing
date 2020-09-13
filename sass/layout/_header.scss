@@ -1,0 +1,38 @@
+.header {
+  position: relative;
+  height: 95vh; /* At every point, the height of the element should be 95% of the viewport height */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.616),
+      rgba($color-primary-dark, 0.534)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover; /* whatever the width of the element, it will fit the element inside of the box */
+  background-position: top; /* ensure that whatever the viewport size, the image remains at the top of the container */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 75vh,
+    0 100%
+  ); /* specify the polygon in which the image is still visible, moving clockwise */
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 2.2rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    text-align: center;
+  }
+}
+
+
