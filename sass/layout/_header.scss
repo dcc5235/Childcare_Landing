@@ -9,6 +9,7 @@
     url(../img/hero.jpg);
   background-size: cover; /* whatever the width of the element, it will fit the element inside of the box */
   background-position: top; /* ensure that whatever the viewport size, the image remains at the top of the container */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(
     0 0,
     100% 0,
@@ -34,5 +35,3 @@
     text-align: center;
   }
 }
-
-
