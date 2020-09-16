@@ -579,7 +579,8 @@ body {
     transition: all 0.5s 0.2s; }
   .popup__left {
     width: 33.33333333%;
-    display: table-cell; }
+    display: table-cell;
+    padding: 1rem; }
     @media (max-width: 56.25em) {
       .popup__left {
         width: 0;
