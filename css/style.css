@@ -648,12 +648,16 @@ body {
     height: 15rem;
     float: left;
     overflow: hidden;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
-    position: relative; }
+    position: relative;
+    border-radius: 50%; }
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      .story__shape {
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        border-radius: none; } }
     @media (max-width: 37.5em) {
       .story__shape {
         transform: translateX(-3rem) skewX(0); } }
@@ -689,16 +693,19 @@ body {
 
 .header {
   position: relative;
-  height: 95vh;
+  height: 85vh;
   /* At every point, the height of the element should be 95% of the viewport height */
   background-image: linear-gradient(to right bottom, rgba(82, 90, 150, 0.616), rgba(49, 57, 117, 0.534)), url(../img/hero.jpg);
   background-size: cover;
   /* whatever the width of the element, it will fit the element inside of the box */
   background-position: top;
-  /* ensure that whatever the viewport size, the image remains at the top of the container */
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /* specify the polygon in which the image is still visible, moving clockwise */ }
+  /* ensure that whatever the viewport size, the image remains at the top of the container */ }
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      /* specify the polygon in which the image is still visible, moving clockwise */
+      height: 95vh; } }
   @media (max-width: 37.5em) {
     .header {
       height: 65vh;
