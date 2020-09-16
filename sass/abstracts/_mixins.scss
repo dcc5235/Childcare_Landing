@@ -33,6 +33,14 @@
       @content;
     }
   }
+
+  @if $breakpoint == tab-port-2 {
+    //900px
+    @media (min-width: 57em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == tab-land {
     //1200px
     @media (max-width: 75em) {

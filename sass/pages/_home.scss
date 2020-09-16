@@ -4,7 +4,7 @@
   margin-top: -20vh;
 
   @include respond(tab-port) {
-    padding: 20rem 0;
+    padding: 15rem 0;
   }
 }
 
@@ -20,12 +20,13 @@
   transform: skewY(-7deg);
   margin-top: -10rem;
 
+  @include respond(tab-port) {
+    padding: 10rem 0;
+    margin-top: -5rem;
+  }
+
   & > * {
     transform: skewY(7deg);
-
-    @include respond(tab-port) {
-      padding: 10rem 0;
-    }
   }
 }
 
@@ -35,7 +36,7 @@
   margin-top: -15rem;
 
   @include respond(tab-port) {
-    padding: 20rem 0 10rem 0;
+    padding: 20rem 0 4rem 0;
   }
 }
 
@@ -44,7 +45,7 @@
   position: relative;
 
   @include respond(tab-port) {
-    padding: 10rem 0;
+    padding: 10rem 0 4rem 0;
   }
 }
 
@@ -55,6 +56,10 @@
     $color-primary-light,
     $color-primary-dark
   );
+
+  @include respond(tab-port) {
+    padding: 4rem 0;
+  }
 }
 
 .book {

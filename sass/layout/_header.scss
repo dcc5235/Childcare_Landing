@@ -18,8 +18,9 @@
   ); /* specify the polygon in which the image is still visible, moving clockwise */
 
   @include respond(phone) {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    height: 65vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 85%);
   }
 
   &__logo-box {
