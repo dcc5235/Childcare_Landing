@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  height: 95vh; /* At every point, the height of the element should be 95% of the viewport height */
+  height: 85vh; /* At every point, the height of the element should be 95% of the viewport height */
   background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.616),
@@ -9,13 +9,17 @@
     url(../img/hero.jpg);
   background-size: cover; /* whatever the width of the element, it will fit the element inside of the box */
   background-position: top; /* ensure that whatever the viewport size, the image remains at the top of the container */
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 75vh,
-    0 100%
-  ); /* specify the polygon in which the image is still visible, moving clockwise */
+
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 75vh,
+      0 100%
+    ); /* specify the polygon in which the image is still visible, moving clockwise */
+    height: 95vh;
+  }
 
   @include respond(phone) {
     height: 65vh;

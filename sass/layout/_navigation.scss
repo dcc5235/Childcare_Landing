@@ -95,6 +95,11 @@
       background-size: 220%;
       transition: all 0.4s;
 
+      @include respond(tab-port) {
+        font-size: 2rem;
+        padding: 0rem 2rem;
+      }
+
       span {
         margin-right: 1.5rem;
         display: inline-block;

@@ -68,6 +68,7 @@
   &__left {
     width: 33.33333333%;
     display: table-cell;
+    padding: 1rem;
 
     @include respond(tab-port) {
       width: 0;
