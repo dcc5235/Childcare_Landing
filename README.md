@@ -10,6 +10,21 @@ A responsive, sample landing page for a childcare company. The site includes fix
 
 ---
 
+## Installation & Technologies
+
+- Download the full package, select the Code button, choose the "Download ZIP" option.
+- Requires Node.js to run: install [Node.js](https://nodejs.org/en/), current version.
+  - <code>npm install</code> to install the Node Sass and libraries, specifically these packages will also be installed.
+    - "autoprefixer"
+    - "concat"
+    - "node-sass"
+    - "npm-run-all"
+    - "postcss-cli"
+  - <code>npm run start</code> to open local server.
+- SASS/SCSS: install [Sass](https://sass-lang.com/install), current version.
+
+---
+
 ## Project Highlights
 
 Section | Features
