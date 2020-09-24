@@ -66,4 +66,5 @@ Main: Section 2 | Info cards with hover effect over image with gradient backgrou
 
 ## Contributors
 
-Dany Chheang dany.chheang@gmail.com
+Dany Chheang dany.chheang@gmail.com<br>
+Design by Jonas Schmedtmann
