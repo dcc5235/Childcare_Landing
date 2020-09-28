@@ -64,7 +64,13 @@ Main: Section 2 | Info cards with hover effect over image with gradient backgrou
 
 ---
 
+## Credits
+
+- Images from [Unsplash.com](https://unsplash.com/) and [Pexels.com](https://www.pexels.com/) licensed under Creative Commons Zero
+- Design by Jonas Schmedtmann
+
+---
+
 ## Contributors
 
-Dany Chheang dany.chheang@gmail.com<br>
-Design by Jonas Schmedtmann
+Dany Chheang dany.chheang@gmail.com
